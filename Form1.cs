@@ -15,8 +15,10 @@ namespace Proton
     {
         Point lastPos = Point.Empty;
         SearchModel searchModel;
+
         Movie[] list;
         int page;
+
         int count;
         bool find;
 
