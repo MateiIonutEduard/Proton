@@ -1,4 +1,6 @@
-﻿namespace Proton
+﻿using Bunifu.Framework;
+
+namespace Proton
 {
     partial class WatchMovie
     {
@@ -51,7 +53,7 @@
             this.header = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.about = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.about = new Bunifu.Framework.BunifuCustomTextbox();
             this.title = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.box = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -528,7 +530,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton ok;
         private Bunifu.Framework.UI.BunifuCustomLabel title;
         private System.Windows.Forms.PictureBox box;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox about;
+        private new Bunifu.Framework.BunifuCustomTextbox about;
         private Bunifu.Framework.UI.BunifuCustomLabel year;
         private Bunifu.Framework.UI.BunifuCustomLabel header;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
