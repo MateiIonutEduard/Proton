@@ -7,6 +7,7 @@ using Proton.Services;
 using Proton.Models;
 using Proton.Data;
 using System.Net.Http;
+using System.Windows.Input;
 #pragma warning disable
 
 namespace Proton
@@ -297,6 +298,54 @@ namespace Proton
                     row.Selected = false;
                     watch.SetMovie(movie.Id);
                     watch.ShowDialog();
+                }
+            }
+        }
+
+        private async void name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                string title = name.Text;
+                var list = GetSelectedGenres();
+                bunifuCustomLabel3.Text = "Movies / Results";
+
+                if (!string.IsNullOrEmpty(title) || list.Count > 0)
+                {
+                    // search by title or by genres...
+                    this.searchModel = new SearchModel
+                    {
+                        title = title,
+                        genres = list.ToArray()
+                    };
+
+                    try
+                    {
+                        var listModel = await MovieService.FindMoviesAsync(searchModel);
+                        this.list = listModel.movies;
+                        page = 1;
+
+                        count = listModel.pages.Value;
+                        current.Text = page.ToString();
+                        ResetPages();
+
+                        var views = Array.ConvertAll<Movie, MovieView>(this.list,
+                                m => (MovieView)m);
+
+                        for (int j = 0; j < views.Length; j++)
+                        {
+                            var bmp = await MovieService.GetCaptureAsync(this.list[j].Info.image_url);
+                            Color color = Color.FromArgb(119, 99, 173);
+                            views[j].Capture = MovieView.Scale(bmp, color);
+                        }
+
+                        movies.DataSource = views;
+                    }
+                    catch (HttpRequestException)
+                    {
+                        if (MessageBox.Show("The application is not configured correctly or the server is not running!", "Proton") == DialogResult.OK)
+                            this.Close();
+                    }
                 }
             }
         }

@@ -50,6 +50,9 @@ namespace Proton
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.last = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.current = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.next = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pageDown = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pageUp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.movies = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -59,24 +62,12 @@ namespace Proton
             this.genres = new System.Windows.Forms.CheckedListBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.next = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.current = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.last = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.captureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.watchDataGridButtonColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.movieViewBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.movieViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.movieViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movies)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.movieViewBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movieViewBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +159,7 @@ namespace Proton
             // 
             // bunifuFlatButton2
             // 
+            this.bunifuFlatButton2.Active = false;
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
             this.bunifuFlatButton2.BackgroundImage = global::Proton.Resources.search;
@@ -204,7 +196,10 @@ namespace Proton
             // 
             // name
             // 
+            this.name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.name.BackColor = System.Drawing.Color.White;
+            this.name.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -217,10 +212,12 @@ namespace Proton
             this.name.LineThickness = 3;
             this.name.Location = new System.Drawing.Point(428, 7);
             this.name.Margin = new System.Windows.Forms.Padding(4);
+            this.name.MaxLength = 32767;
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(146, 33);
             this.name.TabIndex = 2;
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_KeyPress);
             // 
             // bunifuCustomLabel2
             // 
@@ -261,8 +258,124 @@ namespace Proton
             this.panel4.Size = new System.Drawing.Size(622, 430);
             this.panel4.TabIndex = 3;
             // 
+            // last
+            // 
+            this.last.Active = false;
+            this.last.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
+            this.last.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.last.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.last.BorderRadius = 0;
+            this.last.ButtonText = "1";
+            this.last.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.last.DisabledColor = System.Drawing.Color.Gray;
+            this.last.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
+            this.last.Iconcolor = System.Drawing.Color.Transparent;
+            this.last.Iconimage = null;
+            this.last.Iconimage_right = null;
+            this.last.Iconimage_right_Selected = null;
+            this.last.Iconimage_Selected = null;
+            this.last.IconMarginLeft = 0;
+            this.last.IconMarginRight = 0;
+            this.last.IconRightVisible = true;
+            this.last.IconRightZoom = 0D;
+            this.last.IconVisible = true;
+            this.last.IconZoom = 90D;
+            this.last.IsTab = false;
+            this.last.Location = new System.Drawing.Point(463, 371);
+            this.last.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.last.Name = "last";
+            this.last.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.last.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
+            this.last.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
+            this.last.selected = false;
+            this.last.Size = new System.Drawing.Size(31, 28);
+            this.last.TabIndex = 10;
+            this.last.Text = "1";
+            this.last.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.last.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
+            this.last.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // current
+            // 
+            this.current.Active = false;
+            this.current.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
+            this.current.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.current.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.current.BorderRadius = 0;
+            this.current.ButtonText = "1";
+            this.current.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.current.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.current.Enabled = false;
+            this.current.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(69)))), ((int)(((byte)(53)))));
+            this.current.Iconcolor = System.Drawing.Color.Transparent;
+            this.current.Iconimage = null;
+            this.current.Iconimage_right = null;
+            this.current.Iconimage_right_Selected = null;
+            this.current.Iconimage_Selected = null;
+            this.current.IconMarginLeft = 0;
+            this.current.IconMarginRight = 0;
+            this.current.IconRightVisible = true;
+            this.current.IconRightZoom = 0D;
+            this.current.IconVisible = true;
+            this.current.IconZoom = 90D;
+            this.current.IsTab = false;
+            this.current.Location = new System.Drawing.Point(502, 371);
+            this.current.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.current.Name = "current";
+            this.current.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.current.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
+            this.current.OnHoverTextColor = System.Drawing.Color.White;
+            this.current.selected = false;
+            this.current.Size = new System.Drawing.Size(33, 28);
+            this.current.TabIndex = 9;
+            this.current.Text = "1";
+            this.current.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.current.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(69)))), ((int)(((byte)(53)))));
+            this.current.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // next
+            // 
+            this.next.Active = false;
+            this.next.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
+            this.next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.next.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.next.BorderRadius = 0;
+            this.next.ButtonText = "1";
+            this.next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.next.DisabledColor = System.Drawing.Color.Gray;
+            this.next.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.next.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
+            this.next.Iconcolor = System.Drawing.Color.Transparent;
+            this.next.Iconimage = null;
+            this.next.Iconimage_right = null;
+            this.next.Iconimage_right_Selected = null;
+            this.next.Iconimage_Selected = null;
+            this.next.IconMarginLeft = 0;
+            this.next.IconMarginRight = 0;
+            this.next.IconRightVisible = true;
+            this.next.IconRightZoom = 0D;
+            this.next.IconVisible = true;
+            this.next.IconZoom = 90D;
+            this.next.IsTab = false;
+            this.next.Location = new System.Drawing.Point(542, 371);
+            this.next.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.next.Name = "next";
+            this.next.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
+            this.next.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
+            this.next.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
+            this.next.selected = false;
+            this.next.Size = new System.Drawing.Size(29, 28);
+            this.next.TabIndex = 8;
+            this.next.Text = "1";
+            this.next.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.next.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
+            this.next.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // pageDown
             // 
+            this.pageDown.Active = false;
             this.pageDown.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
             this.pageDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
             this.pageDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -299,6 +412,7 @@ namespace Proton
             // 
             // pageUp
             // 
+            this.pageUp.Active = false;
             this.pageUp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
             this.pageUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
             this.pageUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -343,7 +457,6 @@ namespace Proton
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(119)))), ((int)(((byte)(193)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.movies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.movies.AutoGenerateColumns = false;
             this.movies.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.movies.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(99)))), ((int)(((byte)(173)))));
             this.movies.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -359,13 +472,6 @@ namespace Proton
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.movies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.movies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.movies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.captureDataGridViewImageColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.yearDataGridViewTextBoxColumn,
-            this.rankDataGridViewTextBoxColumn,
-            this.watchDataGridButtonColumn});
-            this.movies.DataSource = this.movieViewBindingSource2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(99)))), ((int)(((byte)(173)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -480,6 +586,7 @@ namespace Proton
             // 
             // bunifuFlatButton1
             // 
+            this.bunifuFlatButton1.Active = false;
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(117)))), ((int)(((byte)(216)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -515,179 +622,6 @@ namespace Proton
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.SearchClick);
             // 
-            // next
-            // 
-            this.next.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
-            this.next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.next.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.next.BorderRadius = 0;
-            this.next.ButtonText = "1";
-            this.next.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.next.DisabledColor = System.Drawing.Color.Gray;
-            this.next.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.next.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
-            this.next.Iconcolor = System.Drawing.Color.Transparent;
-            this.next.Iconimage = null;
-            this.next.Iconimage_right = null;
-            this.next.Iconimage_right_Selected = null;
-            this.next.Iconimage_Selected = null;
-            this.next.IconMarginLeft = 0;
-            this.next.IconMarginRight = 0;
-            this.next.IconRightVisible = true;
-            this.next.IconRightZoom = 0D;
-            this.next.IconVisible = true;
-            this.next.IconZoom = 90D;
-            this.next.IsTab = false;
-            this.next.Location = new System.Drawing.Point(542, 371);
-            this.next.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.next.Name = "next";
-            this.next.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.next.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
-            this.next.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
-            this.next.selected = false;
-            this.next.Size = new System.Drawing.Size(29, 28);
-            this.next.TabIndex = 8;
-            this.next.Text = "1";
-            this.next.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.next.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
-            this.next.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // current
-            // 
-            this.current.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
-            this.current.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.current.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.current.BorderRadius = 0;
-            this.current.ButtonText = "1";
-            this.current.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.current.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.current.Enabled = false;
-            this.current.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.current.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(69)))), ((int)(((byte)(53)))));
-            this.current.Iconcolor = System.Drawing.Color.Transparent;
-            this.current.Iconimage = null;
-            this.current.Iconimage_right = null;
-            this.current.Iconimage_right_Selected = null;
-            this.current.Iconimage_Selected = null;
-            this.current.IconMarginLeft = 0;
-            this.current.IconMarginRight = 0;
-            this.current.IconRightVisible = true;
-            this.current.IconRightZoom = 0D;
-            this.current.IconVisible = true;
-            this.current.IconZoom = 90D;
-            this.current.IsTab = false;
-            this.current.Location = new System.Drawing.Point(502, 371);
-            this.current.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.current.Name = "current";
-            this.current.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.current.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
-            this.current.OnHoverTextColor = System.Drawing.Color.White;
-            this.current.selected = false;
-            this.current.Size = new System.Drawing.Size(33, 28);
-            this.current.TabIndex = 9;
-            this.current.Text = "1";
-            this.current.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.current.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(69)))), ((int)(((byte)(53)))));
-            this.current.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // last
-            // 
-            this.last.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(137)))), ((int)(((byte)(236)))));
-            this.last.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.last.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.last.BorderRadius = 0;
-            this.last.ButtonText = "1";
-            this.last.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.last.DisabledColor = System.Drawing.Color.Gray;
-            this.last.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
-            this.last.Iconcolor = System.Drawing.Color.Transparent;
-            this.last.Iconimage = null;
-            this.last.Iconimage_right = null;
-            this.last.Iconimage_right_Selected = null;
-            this.last.Iconimage_Selected = null;
-            this.last.IconMarginLeft = 0;
-            this.last.IconMarginRight = 0;
-            this.last.IconRightVisible = true;
-            this.last.IconRightZoom = 0D;
-            this.last.IconVisible = true;
-            this.last.IconZoom = 90D;
-            this.last.IsTab = false;
-            this.last.Location = new System.Drawing.Point(463, 371);
-            this.last.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.last.Name = "last";
-            this.last.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(153)))), ((int)(((byte)(219)))));
-            this.last.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(129)))), ((int)(((byte)(203)))));
-            this.last.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
-            this.last.selected = false;
-            this.last.Size = new System.Drawing.Size(31, 28);
-            this.last.TabIndex = 10;
-            this.last.Text = "1";
-            this.last.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.last.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(189)))));
-            this.last.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // captureDataGridViewImageColumn
-            // 
-            this.captureDataGridViewImageColumn.DataPropertyName = "Capture";
-            this.captureDataGridViewImageColumn.FillWeight = 81.21828F;
-            this.captureDataGridViewImageColumn.Frozen = true;
-            this.captureDataGridViewImageColumn.HeaderText = "Capture";
-            this.captureDataGridViewImageColumn.Name = "captureDataGridViewImageColumn";
-            this.captureDataGridViewImageColumn.ReadOnly = true;
-            this.captureDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.captureDataGridViewImageColumn.Width = 64;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.FillWeight = 104.6954F;
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titleDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.FillWeight = 104.6954F;
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 86;
-            // 
-            // rankDataGridViewTextBoxColumn
-            // 
-            this.rankDataGridViewTextBoxColumn.DataPropertyName = "Rank";
-            this.rankDataGridViewTextBoxColumn.FillWeight = 104.6954F;
-            this.rankDataGridViewTextBoxColumn.HeaderText = "Rank";
-            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
-            this.rankDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rankDataGridViewTextBoxColumn.Width = 86;
-            // 
-            // watchDataGridButtonColumn
-            // 
-            this.watchDataGridButtonColumn.DataPropertyName = "Watch";
-            this.watchDataGridButtonColumn.FillWeight = 104.6954F;
-            this.watchDataGridButtonColumn.HeaderText = "Watch";
-            this.watchDataGridButtonColumn.Name = "watchDataGridButtonColumn";
-            this.watchDataGridButtonColumn.ReadOnly = true;
-            this.watchDataGridButtonColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.watchDataGridButtonColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.watchDataGridButtonColumn.Width = 86;
-            // 
-            // movieViewBindingSource2
-            // 
-            this.movieViewBindingSource2.DataSource = typeof(Proton.Models.MovieView);
-            // 
-            // movieViewBindingSource1
-            // 
-            this.movieViewBindingSource1.DataSource = typeof(Proton.Models.MovieView);
-            // 
-            // movieViewBindingSource
-            // 
-            this.movieViewBindingSource.DataSource = typeof(Proton.Models.MovieView);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -711,8 +645,6 @@ namespace Proton
             ((System.ComponentModel.ISupportInitialize)(this.movies)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.movieViewBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.movieViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieViewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -740,8 +672,6 @@ namespace Proton
         private System.Windows.Forms.CheckedListBox genres;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private System.Windows.Forms.BindingSource movieViewBindingSource;
-        private System.Windows.Forms.BindingSource movieViewBindingSource1;
-        private System.Windows.Forms.BindingSource movieViewBindingSource2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid movies;
         private Bunifu.Framework.UI.BunifuFlatButton pageDown;
         private Bunifu.Framework.UI.BunifuFlatButton pageUp;
