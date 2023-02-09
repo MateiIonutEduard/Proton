@@ -36,103 +36,103 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing">
-      <HintPath>bin\Debug\Bunifu\Bunifu.Licensing.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuRating">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.Deprecated">
-      <HintPath>bin\Debug\Bunifu\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+      <HintPath>Bunifu\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -268,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bunifu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\System.Text.Json.6.0.3\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.3\build\System.Text.Json.targets')" />
